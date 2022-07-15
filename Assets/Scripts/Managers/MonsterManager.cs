@@ -34,6 +34,8 @@ namespace DefaultNamespace
 		{
 			monsterManager = this._monsterManager;
 
+			this._pool.Init();
+			
 			foreach (MonsterController prefab in this._monsterPrefabs)
 			{
 				this._pool.Create(prefab, 10);

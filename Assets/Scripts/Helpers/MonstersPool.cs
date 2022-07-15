@@ -13,7 +13,7 @@ namespace DefaultNamespace
         
         private Transform _unitsParent;
         
-        private void Awake()
+        public void Init()
         {
             this._pool = new MultiKeyObjectPool<MonsterController, MonsterController>(this.CreateMonster, this.ResetMonster, this.SetNameIndex);
         }
