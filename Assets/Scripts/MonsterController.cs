@@ -19,7 +19,7 @@ namespace DefaultNamespace
 		
 		private void Update()
 		{
-			Vector2 desiredVelocity = /*(Vector2)GameManager.Instance.Player.Position - this.Position +*/ CalculateSeparationVelocity();
+			Vector2 desiredVelocity = (Vector2)GameManager.Instance.Player.Position - this.Position + CalculateSeparationVelocity();
 			
 			this._transform.position = (Time.deltaTime * this.Speed * desiredVelocity.normalized) + this.Position;
 
