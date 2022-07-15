@@ -66,10 +66,18 @@ namespace DefaultNamespace
 
 		private void Spawn(int maxMonsters)
 		{
+			
+			
 			foreach (MonsterController prefab in this._monsterPrefabs)
 			{
-				for (int i = monstersAlive; i <= maxMonsters / this._monsterPrefabs.Length; i++)
+				if(monstersAlive >= maxMonsters)
+					break;
+				
+				for (int i = 0; i <= maxMonsters / this._monsterPrefabs.Length; i++)
 				{
+					if(monstersAlive >= maxMonsters)
+						break;
+					
 					MonsterController monster = this._pool.GetOrCreate(prefab);
 					monster.OnCharacterDie -= OnMonsterDeath;
 					monster.OnCharacterDie += OnMonsterDeath;

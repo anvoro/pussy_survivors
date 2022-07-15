@@ -1354,7 +1354,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _monsterManager: {fileID: 519420034}
   _monsterPrefabs:
+  - {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
   - {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+  - {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
+  - {fileID: 1951829596430795998, guid: 0614d9baeb1b4f94c9b779ba3efc233f, type: 3}
   _pool: {fileID: 519420035}
   SpawnShape: {fileID: 1658534528}
   MonsterParent: {fileID: 956356323}
