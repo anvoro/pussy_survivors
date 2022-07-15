@@ -11,16 +11,8 @@ namespace DefaultNamespace
 		public float AttackCD = 1f;
 
 		private float _currentCD = 0;
-
-		protected override void Start()
-		{
-			this.OnCharacterDie += () =>
-			{
-				Destroy(this.gameObject);
-			};
-			
-			base.Start();
-		}
+		
+		public MonsterController Prefab { get; set; }
 
 		private void OnTriggerStay2D(Collider2D other)
 		{
@@ -46,13 +38,13 @@ namespace DefaultNamespace
 			
 			Vector2 CalculateSeparationVelocity()
 			{
-				if(MonsterManager.Instance.Monsters.Count < 1)
+				if(MonsterManager.Instance.ActiveMonsters.Count < 1)
 					return Vector2.zero;
 				
 				Vector3 totalSeparation = Vector3.zero;
 				int numNeighbors = 0;
 
-				foreach (var monster in MonsterManager.Instance.Monsters)
+				foreach (var monster in MonsterManager.Instance.ActiveMonsters)
 				{
 					float distance = Vector3.Distance(this.Position, monster.transform.position);
 				

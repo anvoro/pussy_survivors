@@ -34,7 +34,6 @@ namespace Weapons
 
 		private void FixedUpdate()
 		{
-			
 			_rigidbody.MovePosition(Time.deltaTime * this.Speed * _rigidbody.transform.up + _rigidbody.transform.position);
 		}
 	}

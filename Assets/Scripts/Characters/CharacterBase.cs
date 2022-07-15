@@ -7,6 +7,8 @@ namespace DefaultNamespace
 	{	
 		public float Speed = 1f;
 
+		public bool IsDead { get; set; }
+		
 		protected SpriteRenderer _renderer;
 		
 		protected Transform _transform;
@@ -17,7 +19,7 @@ namespace DefaultNamespace
 		private int _currentHealth;
 
 		public event Action OnHealthChanged; 
-		public event Action OnCharacterDie; 
+		public event Action<CharacterBase> OnCharacterDie; 
 
 		public int CurrentHealth
 		{
@@ -35,7 +37,7 @@ namespace DefaultNamespace
 				this.OnHealthChanged?.Invoke();
 				
 				if(this._currentHealth == 0)
-					OnCharacterDie?.Invoke();
+					OnCharacterDie?.Invoke(this);
 			}
 		}
 
@@ -57,7 +59,7 @@ namespace DefaultNamespace
 			this._transform = this.transform;
 		}
 
-		protected virtual void Start()
+		public virtual void Reset()
 		{
 			this._currentHealth = this.MaxHealth;
 		}

@@ -25,17 +25,18 @@ public class PlayerController : CharacterBase
         
         this._camera = Camera.main;
         
+        this.Reset();
+        
         base.Awake();
     }
 
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
-        
         foreach (WeaponBase weapon in this.Weapons)
         {
             weapon.Init(this);
         }
+        
         
         this.SetHealthBar();
     }
