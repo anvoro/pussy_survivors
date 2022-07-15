@@ -109,7 +109,7 @@ namespace DefaultNamespace
 			{
 				monster.SetDissolvePower(value);
 
-				value -= 0.075f;
+				value -= 0.02f;
 					
 				await Task.Yield();
 			}

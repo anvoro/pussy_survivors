@@ -20,7 +20,7 @@ namespace Weapons
 		public void Tick(float deltaTime)
 		{
 			if (this._currentCD > 0)
-				this._currentCD -= Time.deltaTime;
+				this._currentCD -= deltaTime;
 			
 			if (_currentCD <= 0)
 			{

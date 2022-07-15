@@ -23,6 +23,9 @@ namespace DefaultNamespace
 
 		public void SetDissolvePower(float value)
 		{
+			if(this._renderer == null)
+				return;
+			
 			this._renderer.material.SetFloat(_dissolvePower, value);
 		}
 
@@ -46,13 +49,16 @@ namespace DefaultNamespace
 		
 		protected override void Update()
 		{
+			if(this.IsDead == true)
+				return;
+			
 			if (this._currentCD > 0)
 				this._currentCD -= Time.deltaTime;
 			
-			Vector2 desiredVelocity = GameManager.Instance.Player.Position - this.Position + CalculateSeparationVelocity();
+			Vector3 desiredVelocity = GameManager.Instance.Player.Position - this.Position + CalculateSeparationVelocity();
 			this.Velocity = -desiredVelocity;
 			
-			this._transform.position = (Time.deltaTime * this.Speed * desiredVelocity.normalized) + this.Position;
+			this._transform.position += (Time.deltaTime * this.Speed * desiredVelocity.normalized);
 
 			base.Update();
 			
