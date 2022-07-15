@@ -10873,10 +10873,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b4e96caa34c4c93b853f75c0976a2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0.3
+  Speed: 0.6
   MaxHealth: 10
   _desiredSeparation: 2
   Damage: 10
+  AttackCD: 1
 --- !u!1 &1849415624
 GameObject:
   m_ObjectHideFlags: 0

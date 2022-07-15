@@ -36,6 +36,9 @@ namespace DefaultNamespace
 			
 			Vector2 CalculateSeparationVelocity()
 			{
+				if(MonsterManager.Instance.Monsters.Count < 1)
+					return Vector2.zero;
+				
 				Vector3 totalSeparation = Vector3.zero;
 				int numNeighbors = 0;
 
