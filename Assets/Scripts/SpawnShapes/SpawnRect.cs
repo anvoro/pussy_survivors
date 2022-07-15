@@ -9,14 +9,10 @@ namespace Tank.Game.SpawnShapes
     {
         private readonly List<Vector3> _resultVariants = new List<Vector3>(4);
 
+        [SerializeField]
         private BoxCollider2D _boxCollider;
 
         public Vector3 Center => transform.TransformPoint(this._boxCollider.offset);
-
-        private void Awake()
-        {
-            this._boxCollider = this.GetComponent<BoxCollider2D>();
-        }
 
         public Vector3 GetRandomPoint()
         {
