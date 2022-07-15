@@ -9,13 +9,13 @@ namespace DefaultNamespace
 		[SerializeField]
 		private MonsterManager _monsterManager;
 
-		private static MonsterManager gm;
+		private static MonsterManager monsterManager;
 
-		public static MonsterManager Instance => gm;
+		public static MonsterManager Instance => monsterManager;
 
 		private void Awake()
 		{
-			gm = this._monsterManager;
+			monsterManager = this._monsterManager;
 		}
 		
 		public List<MonsterController> Monsters;
