@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c438c8ce5269ce64281de2a91e3175b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   _desiredSeparation: 2
   Damage: 2
   AttackCD: 1
+  _collider: {fileID: 8366034231312435621}
 --- !u!58 &8366034231312435621
 CircleCollider2D:
   m_ObjectHideFlags: 0

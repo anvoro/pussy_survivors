@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Tank.Game.SpawnShapes;
 using UnityEngine;
 
@@ -95,13 +96,25 @@ namespace DefaultNamespace
 			}
 		}
 
-		private void OnMonsterDeath(CharacterBase monster)
+		private async void OnMonsterDeath(CharacterBase character)
 		{
-			monster.IsDead = true;
-
-			this._pool.Return((MonsterController)monster);
+			var monster = (MonsterController)character;
 			
+			monster.IsDead = true;
 			monstersAlive--;
+			monster.Collider2D.enabled = false;
+			
+			float value = 1f;
+			while (value > 0)
+			{
+				monster.SetDissolvePower(value);
+
+				value -= 0.1f;
+					
+				await Task.Yield();
+			}
+			
+			this._pool.Return(monster);
 		}
 	}
 }

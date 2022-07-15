@@ -11,8 +11,28 @@ namespace DefaultNamespace
 		public float AttackCD = 1f;
 
 		private float _currentCD = 0;
+
+		[SerializeField]
+		private Collider2D _collider;
+
+		public Collider2D Collider2D => this._collider;
 		
 		public MonsterController Prefab { get; set; }
+
+		private readonly int _dissolvePower = Shader.PropertyToID("_DissolvePower");
+
+		public void SetDissolvePower(float value)
+		{
+			this._renderer.material.SetFloat(_dissolvePower, value);
+		}
+
+		public override void Reset()
+		{
+			this._renderer.material.SetFloat(_dissolvePower, 1);
+			this._collider.enabled = true;
+			
+			base.Reset();
+		}
 
 		private void OnTriggerStay2D(Collider2D other)
 		{
