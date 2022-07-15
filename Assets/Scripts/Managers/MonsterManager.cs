@@ -38,7 +38,7 @@ namespace DefaultNamespace
 			
 			foreach (MonsterController prefab in this._monsterPrefabs)
 			{
-				this._pool.Create(prefab, 10);
+				this._pool.Create(prefab, this.maxMonstersAlive / this._monsterPrefabs.Length);
 			}
 
 			currentSpawnDelay = this.spawnDelay;
@@ -68,9 +68,7 @@ namespace DefaultNamespace
 
 		private void Spawn(int maxMonsters)
 		{
-			
-			
-			foreach (MonsterController prefab in this._monsterPrefabs)
+			foreach (MonsterController prefab in this._monsterPrefabs.OrderBy(a => Guid.NewGuid()).ToArray())
 			{
 				if(monstersAlive >= maxMonsters)
 					break;
