@@ -11,7 +11,7 @@ namespace DefaultNamespace
 		
 		protected Transform _transform;
 
-		protected Vector2 _velocity;
+		public Vector2 Velocity { get; protected set; }
 
 		public int MaxHealth = 10;
 		private int _currentHealth;
@@ -64,7 +64,7 @@ namespace DefaultNamespace
 
 		protected virtual void Update()
 		{
-			_renderer.flipX = _velocity.x < 0;
+			_renderer.flipX = this.Velocity.x < 0;
 		}
 	}
 }

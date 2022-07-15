@@ -11,7 +11,17 @@ namespace DefaultNamespace
 		public float AttackCD = 1f;
 
 		private float _currentCD = 0;
-		
+
+		protected override void Start()
+		{
+			this.OnCharacterDie += () =>
+			{
+				Destroy(this.gameObject);
+			};
+			
+			base.Start();
+		}
+
 		private void OnTriggerStay2D(Collider2D other)
 		{
 			if (_currentCD <= 0 && other.gameObject.TryGetComponent(out PlayerController player))
@@ -28,7 +38,7 @@ namespace DefaultNamespace
 				this._currentCD -= Time.deltaTime;
 			
 			Vector2 desiredVelocity = GameManager.Instance.Player.Position - this.Position + CalculateSeparationVelocity();
-			this._velocity = -desiredVelocity;
+			this.Velocity = -desiredVelocity;
 			
 			this._transform.position = (Time.deltaTime * this.Speed * desiredVelocity.normalized) + this.Position;
 

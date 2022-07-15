@@ -6555,6 +6555,8 @@ MonoBehaviour:
   Canvas: {fileID: 1208614417}
   HealthBarPivot: {fileID: 1417105177}
   HealthBar: {fileID: 1524145706}
+  Weapons:
+  - {fileID: 11400000, guid: 595f2c7950259df4e9c824a2cc33b72e, type: 2}
 --- !u!61 &983362003
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10761,7 +10763,7 @@ GameObject:
   - component: {fileID: 1847728423}
   - component: {fileID: 1847728421}
   - component: {fileID: 1847728425}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Enemy
   m_TagString: Monster
   m_Icon: {fileID: 0}

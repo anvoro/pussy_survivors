@@ -2,6 +2,7 @@ using System;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.UI;
+using Weapons;
 
 public class PlayerController : CharacterBase
 {
@@ -14,6 +15,8 @@ public class PlayerController : CharacterBase
     public Transform HealthBarPivot;
 
     public Slider HealthBar;
+
+    public WeaponBase[] Weapons;
     
     // Start is called before the first frame update
     protected override void Awake()
@@ -29,7 +32,23 @@ public class PlayerController : CharacterBase
     {
         base.Start();
         
+        foreach (WeaponBase weapon in this.Weapons)
+        {
+            weapon.Init(this);
+        }
+        
         this.SetHealthBar();
+    }
+
+    protected override void Update()
+    {
+        for (int i = 0; i < this.Weapons.Length; i++)
+        {
+            WeaponBase weapon = this.Weapons[i];
+            weapon.Tick(Time.deltaTime);
+        }
+
+        base.Update();
     }
 
     private void FixedUpdate()
@@ -39,7 +58,7 @@ public class PlayerController : CharacterBase
         Vector2 position = this.Position;
         Vector2 moveVector = position - worldPosition;
         
-        this._velocity = moveVector;
+        this.Velocity = moveVector;
         this.Rigidbody2D.MovePosition(Time.deltaTime * this.Speed * -moveVector.normalized + position);
     }
 
