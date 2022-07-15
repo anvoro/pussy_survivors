@@ -5,6 +5,9 @@ namespace DefaultNamespace
 {
 	public class GameManager : MonoBehaviour
 	{
+		public const string PlayerTag = "Player";
+		public const string MonsterTag = "Monster";
+		
 		public PlayerController Player;
 		
 		[SerializeField]

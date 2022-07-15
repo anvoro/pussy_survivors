@@ -2,27 +2,38 @@
 
 namespace DefaultNamespace
 {
-	public class MonsterController : MonoBehaviour
+	public class MonsterController : CharacterBase
 	{
-		public float Speed = 1f;
 		[SerializeField] private float _desiredSeparation = 2f;
-		
-		private Transform _transform;
 
-		public Vector2 Position => this._transform.position;
-    
-		// Start is called before the first frame update
-		void Awake()
+		public int Damage = 5;
+
+		public float AttackCD = 1f;
+
+		private float _currentCD = 0;
+		
+		private void OnTriggerStay2D(Collider2D other)
 		{
-			this._transform = this.transform;
+			if (_currentCD <= 0 && other.gameObject.TryGetComponent(out PlayerController player))
+			{
+				player.Hurt(Damage);
+
+				this._currentCD = this.AttackCD;
+			}
 		}
 		
-		private void Update()
+		protected override void Update()
 		{
-			Vector2 desiredVelocity = (Vector2)GameManager.Instance.Player.Position - this.Position + CalculateSeparationVelocity();
+			if (this._currentCD > 0)
+				this._currentCD -= Time.deltaTime;
+			
+			Vector2 desiredVelocity = GameManager.Instance.Player.Position - this.Position + CalculateSeparationVelocity();
+			this._velocity = -desiredVelocity;
 			
 			this._transform.position = (Time.deltaTime * this.Speed * desiredVelocity.normalized) + this.Position;
 
+			base.Update();
+			
 			Vector2 CalculateSeparationVelocity()
 			{
 				Vector3 totalSeparation = Vector3.zero;
@@ -35,8 +46,6 @@ namespace DefaultNamespace
 					if (distance < this._desiredSeparation)
 					{
 						Vector3 separationVector = this._transform.position - monster.transform.position;
-						//todo: не ясно влияет ли это деление на что то, надо провести больше тестов
-						//separationVector /= distance;
 
 						totalSeparation += separationVector;
 
