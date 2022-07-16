@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 798324762590165815}
   - component: {fileID: 6825215898724410768}
   - component: {fileID: -3608975097128384696}
-  - component: {fileID: 3244319297962379678}
-  - component: {fileID: 3439665869770524835}
+  - component: {fileID: 2127881053110518213}
+  - component: {fileID: 1933818695030058719}
   m_Layer: 14
   m_Name: Missle
   m_TagString: Untagged
@@ -74,9 +74,9 @@ MonoBehaviour:
   DoDamageOnContact: 1
   DestroySelfOnContact: 1
   Sprite: {fileID: 1906896665449619255}
-  Collider: {fileID: 3244319297962379678}
---- !u!58 &3244319297962379678
-CircleCollider2D:
+  Collider: {fileID: 0}
+--- !u!70 &2127881053110518213
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,11 +88,11 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.0252333, y: -0.11088848}
-  serializedVersion: 2
-  m_Radius: 1.4083493
---- !u!58 &3439665869770524835
-CircleCollider2D:
+  m_Offset: {x: -0.11736424, y: -0.022820223}
+  m_Size: {x: 4.768921, y: 2.4280384}
+  m_Direction: 1
+--- !u!70 &1933818695030058719
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -104,9 +104,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.77268213, y: -0.11088818}
-  serializedVersion: 2
-  m_Radius: 1.5813705
+  m_Offset: {x: -0.11736424, y: -0.022820223}
+  m_Size: {x: 4.768921, y: 2.4280384}
+  m_Direction: 1
 --- !u!1 &4242001984924442615
 GameObject:
   m_ObjectHideFlags: 0
