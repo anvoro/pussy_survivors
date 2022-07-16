@@ -17,7 +17,6 @@ public class load_game : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.LogError("!@#");
         SceneManager.LoadScene("Main");
     }
 }
