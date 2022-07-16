@@ -118,6 +118,15 @@ public class PlayerController : CharacterBase
         base.Update();
     }
 
+    private void OnDrawGizmos()
+    {
+        for (int i = 0; i < this.Weapons.Length; i++)
+        {
+            WeaponBase weapon = this.Weapons[i];
+            weapon.DrawG();
+        }
+    }
+
     private void FixedUpdate()
     {
         Vector2 worldPosition = this._camera.ScreenToWorldPoint(Input.mousePosition);

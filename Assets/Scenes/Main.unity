@@ -655,6 +655,7 @@ MonoBehaviour:
   _pool: {fileID: 956356324}
   SpawnShape: {fileID: 1658534528}
   MonsterParent: {fileID: 956356323}
+  KillsText: {fileID: 9102872269668522488}
   spawnDelay: 3
   maxMonstersAlive: 20
   Configs:
@@ -905,6 +906,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2226d5c4c3d029344ae65f488669909f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1681801567 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2704919842863610370, guid: 684d412c3ba9e5e4ea0e31bd2dbb480a, type: 3}
+  m_PrefabInstance: {fileID: 9102872269668522487}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1848706726 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6305013636187786745, guid: 684d412c3ba9e5e4ea0e31bd2dbb480a, type: 3}
@@ -1004,7 +1016,7 @@ PrefabInstance:
     - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
       propertyPath: LevelText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1681801567}
     - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
       propertyPath: Levels.Array.size
       value: 11
@@ -1230,6 +1242,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2704919842863610370, guid: 684d412c3ba9e5e4ea0e31bd2dbb480a, type: 3}
+      propertyPath: m_text
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3570495519579963744, guid: 684d412c3ba9e5e4ea0e31bd2dbb480a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1260,6 +1276,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4296485737295027642, guid: 684d412c3ba9e5e4ea0e31bd2dbb480a, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669676831090038432, guid: 684d412c3ba9e5e4ea0e31bd2dbb480a, type: 3}
+      propertyPath: m_text
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6860330880430365830, guid: 684d412c3ba9e5e4ea0e31bd2dbb480a, type: 3}
@@ -1460,3 +1480,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 684d412c3ba9e5e4ea0e31bd2dbb480a, type: 3}
+--- !u!114 &9102872269668522488 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4669676831090038432, guid: 684d412c3ba9e5e4ea0e31bd2dbb480a, type: 3}
+  m_PrefabInstance: {fileID: 9102872269668522487}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

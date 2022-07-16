@@ -168,6 +168,7 @@ MonoBehaviour:
   LevelText: {fileID: 0}
   Weapons:
   - {fileID: 11400000, guid: 595f2c7950259df4e9c824a2cc33b72e, type: 2}
+  - {fileID: 11400000, guid: 95c4f5a64aafbd84cb8229f66e9296dd, type: 2}
 --- !u!1 &2231849429262212434
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,5 +30,7 @@ namespace Weapons
 		}
 
 		protected abstract void Attack();
+
+		public abstract void DrawG();
 	}
 }

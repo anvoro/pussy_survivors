@@ -40,5 +40,9 @@ namespace Weapons
 			transform.rotation = Quaternion.LookRotation(forward: Vector3.forward, upwards: -this._player.Velocity);
 			transform.position += (Vector3)_player.Position + (Vector3)this._player.Velocity.normalized * -this.ProjectileSpawnOffset;
 		}
+
+		public override void DrawG()
+		{
+		}
 	}
 }

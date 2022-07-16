@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DefaultNamespace
 {
@@ -18,6 +19,11 @@ namespace DefaultNamespace
 
 		private void Awake()
 		{
+			Player.OnCharacterDie += c =>
+			{
+				SceneManager.LoadScene(0);
+			};
+			
 			gm = _gameManager;
 			MonsterManager.Init();
 		}
