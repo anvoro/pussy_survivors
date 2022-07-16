@@ -963,7 +963,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
   m_PrefabInstance: {fileID: 2231849429307921985}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1766567230}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78db0ebe477e23f449c615a00147fde0, type: 3}
@@ -1184,6 +1184,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1766567230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2231849428880359312, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+  m_PrefabInstance: {fileID: 2231849429307921985}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1766567236
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766567230}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cccd8f2b991bbd147929cb3e24222c0f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1848706726 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6305013636187786745, guid: 684d412c3ba9e5e4ea0e31bd2dbb480a, type: 3}
@@ -1329,6 +1354,10 @@ PrefabInstance:
       propertyPath: LevelText
       value: 
       objectReference: {fileID: 1681801567}
+    - target: {fileID: 2231849428880359316, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1360223928, guid: 158e9fd39c517db40a1ee197be057fd7, type: 3}
     - target: {fileID: 2231849428880359319, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
       propertyPath: m_RootOrder
       value: 3
