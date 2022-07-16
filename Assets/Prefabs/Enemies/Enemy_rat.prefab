@@ -103,7 +103,7 @@ MonoBehaviour:
   _desiredSeparation: 2
   Damage: 1
   AttackCD: 1
-  KillXP: 1
+  KillXP: 4
   _collider: {fileID: 8449168318269357312}
 --- !u!70 &8449168318269357312
 CapsuleCollider2D:

@@ -2098,17 +2098,61 @@ MonoBehaviour:
   _pool: {fileID: 956356324}
   SpawnShape: {fileID: 1658534528}
   MonsterParent: {fileID: 956356323}
-  spawnDelay: 5
-  maxMonstersAlive: 15
+  spawnDelay: 3
+  maxMonstersAlive: 20
   Configs:
   - MonsterConfigs:
-    - MaxMonsterCount: 11
-      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+    - MaxMonsterCount: 4
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
   - MonsterConfigs:
-    - MaxMonsterCount: 8
-      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
     - MaxMonsterCount: 6
       MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+  - MonsterConfigs:
+    - MaxMonsterCount: 8
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+  - MonsterConfigs:
+    - MaxMonsterCount: 10
+      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+  - MonsterConfigs:
+    - MaxMonsterCount: 7
+      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+    - MaxMonsterCount: 5
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+  - MonsterConfigs:
+    - MaxMonsterCount: 7
+      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+    - MaxMonsterCount: 5
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+    - MaxMonsterCount: 4
+      MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
+  - MonsterConfigs:
+    - MaxMonsterCount: 7
+      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+    - MaxMonsterCount: 5
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+    - MaxMonsterCount: 4
+      MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
+  - MonsterConfigs:
+    - MaxMonsterCount: 7
+      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+    - MaxMonsterCount: 5
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+    - MaxMonsterCount: 4
+      MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
+  - MonsterConfigs:
+    - MaxMonsterCount: 7
+      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+    - MaxMonsterCount: 5
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+    - MaxMonsterCount: 4
+      MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
+  - MonsterConfigs:
+    - MaxMonsterCount: 7
+      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+    - MaxMonsterCount: 5
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+    - MaxMonsterCount: 4
+      MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
   - MonsterConfigs:
     - MaxMonsterCount: 7
       MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
@@ -4104,6 +4148,114 @@ PrefabInstance:
       propertyPath: LevelText
       value: 
       objectReference: {fileID: 1672605393}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[3].HpAdd
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[4].HpAdd
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[5].HpAdd
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[6].HpAdd
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[7].HpAdd
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[8].HpAdd
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[9].HpAdd
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[10].HpAdd
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[1].SpeedAdd
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[2].SpeedAdd
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[3].SpeedAdd
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[4].SpeedAdd
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[5].SpeedAdd
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[6].SpeedAdd
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[7].SpeedAdd
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[8].SpeedAdd
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[9].SpeedAdd
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[10].SpeedAdd
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[3].XpToNextLevel
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[4].XpToNextLevel
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[5].XpToNextLevel
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[6].XpToNextLevel
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[7].XpToNextLevel
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[8].XpToNextLevel
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[9].XpToNextLevel
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: Levels.Array.data[10].XpToNextLevel
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 2231849428880359319, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
       propertyPath: m_RootOrder
       value: 3
