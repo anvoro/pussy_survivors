@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace DefaultNamespace
 {
@@ -49,12 +48,7 @@ namespace DefaultNamespace
 				this._currentCD = this.AttackCD;
 			}
 		}
-
-		// private void OnCollisionStay2D(Collider2D col)
-		// {
-		//
-		// }
-		//
+		
 		protected override void Update()
 		{
 			if(this.IsDead == true)
