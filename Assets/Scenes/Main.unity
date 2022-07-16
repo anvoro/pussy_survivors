@@ -854,7 +854,7 @@ MonoBehaviour:
     - MaxMonsterCount: 7
       MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
     - MaxMonsterCount: 5
-      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d7a6f9f44e9820e46bc8d58b3155b312, type: 3}
     - MaxMonsterCount: 4
       MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
     - MaxMonsterCount: 4
@@ -863,92 +863,101 @@ MonoBehaviour:
     - MaxMonsterCount: 7
       MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
     - MaxMonsterCount: 5
-      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d7a6f9f44e9820e46bc8d58b3155b312, type: 3}
     - MaxMonsterCount: 4
       MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
     - MaxMonsterCount: 4
       MonsterPrefab: {fileID: 1951829596430795998, guid: 9f0b0949c9e69ed479a3612a7858de4d, type: 3}
   - MonsterConfigs:
     - MaxMonsterCount: 7
-      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 960c67428cb570a45bdb33692f3a5643, type: 3}
     - MaxMonsterCount: 5
-      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d7a6f9f44e9820e46bc8d58b3155b312, type: 3}
     - MaxMonsterCount: 4
-      MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 3b213c02d9db6584dbf3d2617e7cdd44, type: 3}
     - MaxMonsterCount: 4
       MonsterPrefab: {fileID: 1951829596430795998, guid: 9f0b0949c9e69ed479a3612a7858de4d, type: 3}
   - MonsterConfigs:
     - MaxMonsterCount: 7
-      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 960c67428cb570a45bdb33692f3a5643, type: 3}
     - MaxMonsterCount: 5
-      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d7a6f9f44e9820e46bc8d58b3155b312, type: 3}
     - MaxMonsterCount: 4
-      MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 3b213c02d9db6584dbf3d2617e7cdd44, type: 3}
     - MaxMonsterCount: 4
       MonsterPrefab: {fileID: 1951829596430795998, guid: 9f0b0949c9e69ed479a3612a7858de4d, type: 3}
   - MonsterConfigs:
     - MaxMonsterCount: 7
-      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 960c67428cb570a45bdb33692f3a5643, type: 3}
     - MaxMonsterCount: 5
-      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d7a6f9f44e9820e46bc8d58b3155b312, type: 3}
     - MaxMonsterCount: 4
-      MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 3b213c02d9db6584dbf3d2617e7cdd44, type: 3}
     - MaxMonsterCount: 4
       MonsterPrefab: {fileID: 1951829596430795998, guid: 9f0b0949c9e69ed479a3612a7858de4d, type: 3}
   - MonsterConfigs:
     - MaxMonsterCount: 7
-      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 960c67428cb570a45bdb33692f3a5643, type: 3}
     - MaxMonsterCount: 5
-      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d7a6f9f44e9820e46bc8d58b3155b312, type: 3}
     - MaxMonsterCount: 4
-      MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 3b213c02d9db6584dbf3d2617e7cdd44, type: 3}
     - MaxMonsterCount: 4
-      MonsterPrefab: {fileID: 1951829596430795998, guid: 9f0b0949c9e69ed479a3612a7858de4d, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 12d67a2bfc31c27448e69ba59efdc712, type: 3}
   - MonsterConfigs:
     - MaxMonsterCount: 7
-      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 960c67428cb570a45bdb33692f3a5643, type: 3}
     - MaxMonsterCount: 5
-      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d7a6f9f44e9820e46bc8d58b3155b312, type: 3}
     - MaxMonsterCount: 4
-      MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 3b213c02d9db6584dbf3d2617e7cdd44, type: 3}
     - MaxMonsterCount: 4
-      MonsterPrefab: {fileID: 1951829596430795998, guid: 9f0b0949c9e69ed479a3612a7858de4d, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 12d67a2bfc31c27448e69ba59efdc712, type: 3}
   - MonsterConfigs:
     - MaxMonsterCount: 7
-      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 960c67428cb570a45bdb33692f3a5643, type: 3}
     - MaxMonsterCount: 5
-      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d7a6f9f44e9820e46bc8d58b3155b312, type: 3}
     - MaxMonsterCount: 4
-      MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 3b213c02d9db6584dbf3d2617e7cdd44, type: 3}
     - MaxMonsterCount: 4
-      MonsterPrefab: {fileID: 1951829596430795998, guid: 9f0b0949c9e69ed479a3612a7858de4d, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 12d67a2bfc31c27448e69ba59efdc712, type: 3}
   - MonsterConfigs:
     - MaxMonsterCount: 7
-      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 960c67428cb570a45bdb33692f3a5643, type: 3}
     - MaxMonsterCount: 5
-      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d7a6f9f44e9820e46bc8d58b3155b312, type: 3}
     - MaxMonsterCount: 4
-      MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 3b213c02d9db6584dbf3d2617e7cdd44, type: 3}
     - MaxMonsterCount: 4
-      MonsterPrefab: {fileID: 1951829596430795998, guid: 9f0b0949c9e69ed479a3612a7858de4d, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 12d67a2bfc31c27448e69ba59efdc712, type: 3}
   - MonsterConfigs:
     - MaxMonsterCount: 7
-      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 960c67428cb570a45bdb33692f3a5643, type: 3}
     - MaxMonsterCount: 5
-      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d7a6f9f44e9820e46bc8d58b3155b312, type: 3}
     - MaxMonsterCount: 4
-      MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 3b213c02d9db6584dbf3d2617e7cdd44, type: 3}
     - MaxMonsterCount: 4
-      MonsterPrefab: {fileID: 1951829596430795998, guid: 9f0b0949c9e69ed479a3612a7858de4d, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 12d67a2bfc31c27448e69ba59efdc712, type: 3}
   - MonsterConfigs:
     - MaxMonsterCount: 7
-      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 960c67428cb570a45bdb33692f3a5643, type: 3}
     - MaxMonsterCount: 5
-      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d7a6f9f44e9820e46bc8d58b3155b312, type: 3}
     - MaxMonsterCount: 4
-      MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 3b213c02d9db6584dbf3d2617e7cdd44, type: 3}
     - MaxMonsterCount: 4
-      MonsterPrefab: {fileID: 1951829596430795998, guid: 9f0b0949c9e69ed479a3612a7858de4d, type: 3}
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 12d67a2bfc31c27448e69ba59efdc712, type: 3}
+  - MonsterConfigs:
+    - MaxMonsterCount: 7
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 960c67428cb570a45bdb33692f3a5643, type: 3}
+    - MaxMonsterCount: 5
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d7a6f9f44e9820e46bc8d58b3155b312, type: 3}
+    - MaxMonsterCount: 4
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 3b213c02d9db6584dbf3d2617e7cdd44, type: 3}
+    - MaxMonsterCount: 4
+      MonsterPrefab: {fileID: 1951829596430795998, guid: 12d67a2bfc31c27448e69ba59efdc712, type: 3}
 --- !u!114 &983362002 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
