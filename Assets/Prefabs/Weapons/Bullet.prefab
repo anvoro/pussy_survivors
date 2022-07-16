@@ -69,8 +69,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 6
+  DoDamageOnContact: 1
+  DestroySelfOnContact: 1
   SpriteRotateSpeed: 0.75
   Sprite: {fileID: 1906896665449619255}
+  Collider: {fileID: 5015432744000687021}
 --- !u!70 &5015432744000687021
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -139,7 +142,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c438c8ce5269ce64281de2a91e3175b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

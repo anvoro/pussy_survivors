@@ -60,7 +60,7 @@ namespace DefaultNamespace
 			Vector3 desiredVelocity = GameManager.Instance.Player.Position - this.Position + CalculateSeparationVelocity();
 			this.Velocity = -desiredVelocity;
 			
-			this._transform.position += (Time.deltaTime * this.Speed * desiredVelocity.normalized);
+			this.transform.position += (Time.deltaTime * this.Speed * desiredVelocity.normalized);
 
 			base.Update();
 			
@@ -78,7 +78,7 @@ namespace DefaultNamespace
 				
 					if (distance < this._desiredSeparation)
 					{
-						Vector3 separationVector = this._transform.position - monster.transform.position;
+						Vector3 separationVector = transform.position - monster.transform.position;
 
 						totalSeparation += separationVector;
 
