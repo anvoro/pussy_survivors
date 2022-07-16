@@ -12,36 +12,6 @@ namespace Weapons
 
 		public float ProjectileSpawnOffset = 1f;
 
-		private ObjectPool<Projectile> _pool;
-		
-		public override void Init(PlayerController player)
-		{
-			base.Init(player);
-			
-			initPool();
-			
-			void initPool()
-			{
-				this._pool = new ObjectPool<Projectile>(() =>
-					{
-						Projectile projectile = Instantiate(this.ProjectilePrefab, Projectile.ProjectileParent);
-						projectile.OnTriggered += this.OnProjectileTriggered;
-						
-						return projectile;
-					},
-					projectile =>
-					{
-						projectile.ResetProjectile();
-					},
-					(go, index) =>
-					{
-						go.name = string.Concat(go.name, $"_{index}");
-					});
-
-				this._pool.Create(2);
-			}
-		}
-
 		private async void OnProjectileTriggered(Projectile projectile)
 		{
 			projectile.Collider.enabled = false;
@@ -56,19 +26,19 @@ namespace Weapons
 				await Task.Yield();
 			}
 			
-			this._pool.Return(projectile);
+			projectile.OnTriggered -= this.OnProjectileTriggered;
+			Destroy(projectile.gameObject);
 		}
 
 		protected override void Attack()
 		{
-			var projectile = _pool.GetOrCreate();
+			var projectile = Instantiate(this.ProjectilePrefab, Projectile.ProjectileParent);
 			projectile.Init(this.Damage);
 			
-			Transform transform;
-			(transform = projectile.transform).rotation = Quaternion.LookRotation(forward: Vector3.forward, upwards: -this._player.Velocity);
+			projectile.OnTriggered += this.OnProjectileTriggered;
+			Transform transform = projectile.transform;
+			transform.rotation = Quaternion.LookRotation(forward: Vector3.forward, upwards: -this._player.Velocity);
 			transform.position += (Vector3)_player.Position + (Vector3)this._player.Velocity.normalized * -this.ProjectileSpawnOffset;
-			
-			projectile.gameObject.SetActive(true);
 		}
 	}
 }

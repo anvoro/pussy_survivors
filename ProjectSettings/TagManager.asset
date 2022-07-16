@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ProjectileParent
+  - FxTemporaire
+  - Monster
   layers:
   - Default
   - TransparentFX
@@ -25,7 +27,7 @@ TagManager:
   - 
   - Spawners
   - 
-  - 
+  - Obstacle
   - 
   - 
   - 

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace DefaultNamespace
 {
@@ -39,16 +40,21 @@ namespace DefaultNamespace
 			base.Reset();
 		}
 
-		private void OnTriggerStay2D(Collider2D other)
+		private void OnCollisionStay(Collision collisionInfo)
 		{
-			if (_currentCD <= 0 && other.gameObject.TryGetComponent(out PlayerController player))
+			if (_currentCD <= 0 && collisionInfo.gameObject.TryGetComponent(out PlayerController player))
 			{
 				player.Hurt(Damage);
 
 				this._currentCD = this.AttackCD;
 			}
 		}
-		
+
+		// private void OnCollisionStay2D(Collider2D col)
+		// {
+		//
+		// }
+		//
 		protected override void Update()
 		{
 			if(this.IsDead == true)
