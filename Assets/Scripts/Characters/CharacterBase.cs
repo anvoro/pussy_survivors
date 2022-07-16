@@ -8,8 +8,8 @@ namespace DefaultNamespace
 		public bool IsDead { get; set; }
 		
 		protected SpriteRenderer _renderer;
-		
-		protected Transform _transform;
+
+		protected Transform Transform => this._transform ? this._transform : (this._transform = this.transform);
 
 		public Vector2 Velocity { get; protected set; }
 
@@ -17,6 +17,7 @@ namespace DefaultNamespace
 		public float _maxHealthBase = 10;
 		
 		protected float _currentHealth;
+		private Transform _transform;
 
 		public event Action OnHealthChanged; 
 		public event Action<CharacterBase> OnCharacterDie; 
@@ -51,7 +52,7 @@ namespace DefaultNamespace
 			}
 		}
 
-		public Vector2 Position => this._transform.position;
+		public Vector2 Position => this.Transform.position;
 
 		public void Hurt(float value)
 		{
@@ -66,7 +67,6 @@ namespace DefaultNamespace
 		protected virtual void Awake()
 		{
 			_renderer = this.GetComponent<SpriteRenderer>();
-			this._transform = this.transform;
 		}
 
 		public virtual void Reset()

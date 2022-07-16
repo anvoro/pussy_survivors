@@ -22,8 +22,7 @@ namespace DefaultNamespace
 		private List<MonsterController> _activeMonsters = new List<MonsterController>();
 		
 		private static MonsterManager monsterManager;
-
-		//todo добавить фильтрацию по IsDead
+		
 		public List<MonsterController> ActiveMonsters => this._activeMonsters.Where(e => e.IsDead == false).ToList();
 		
 		public static MonsterManager Instance => monsterManager;
@@ -40,7 +39,7 @@ namespace DefaultNamespace
 			}
 
 			currentSpawnDelay = this.spawnDelay;
-			Spawn(5);
+			//Spawn(5);
 		}
 
 		public float spawnDelay;
@@ -59,7 +58,7 @@ namespace DefaultNamespace
 
 			if (currentSpawnDelay <= 0)
 			{
-				Spawn(maxMonstersAlive);
+				//Spawn(maxMonstersAlive);
 				this.currentSpawnDelay = spawnDelay;
 			}
 		}

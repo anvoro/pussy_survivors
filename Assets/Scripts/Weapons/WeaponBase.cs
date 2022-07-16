@@ -12,7 +12,7 @@ namespace Weapons
 
 		protected PlayerController _player;
 		
-		public void Init(PlayerController player)
+		public virtual void Init(PlayerController player)
 		{
 			_player = player;
 		}

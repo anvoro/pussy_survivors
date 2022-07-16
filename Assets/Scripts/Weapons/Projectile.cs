@@ -1,4 +1,5 @@
-﻿using DefaultNamespace;
+﻿using System;
+using DefaultNamespace;
 using DG.Tweening;
 using DG.Tweening.Core;
 using DG.Tweening.Plugins.Options;
@@ -8,6 +9,13 @@ namespace Weapons
 {
 	public class Projectile : MonoBehaviour
 	{
+		private static Transform projectileParent;
+		
+		public static Transform ProjectileParent => projectileParent ??= GameObject.FindGameObjectWithTag("ProjectileParent").transform;
+
+		private static Camera Camera => camera ??= Camera.main;
+		private static Camera camera;
+		
 		public float Speed;
 
 		public bool DoDamageOnContact = true;
@@ -21,6 +29,9 @@ namespace Weapons
 
 		public SpriteRenderer Sprite;
 		
+		public Collider2D Collider;
+		
+		public event Action<Projectile> OnTriggered;
 		
 		private void Awake()
 		{
@@ -38,9 +49,12 @@ namespace Weapons
 					.SetRelative(true).SetEase(Ease.Linear).SetLoops(-1);
 		}
 		
-		private void OnDisable()
+		public void ResetProjectile()
 		{
 			_tween.Kill();
+
+			this.gameObject.SetActive(false);
+			this.Collider.enabled = true;
 		}
 
 		private void OnTriggerEnter2D(Collider2D other)
@@ -50,14 +64,36 @@ namespace Weapons
 				monster.Hurt(this._damage);
 				
 				if(DestroySelfOnContact == true)
-					//todo добавить пул
-					Destroy(this.gameObject);
+					this.OnTriggered?.Invoke(this);
 			}
 		}
 
 		private void FixedUpdate()
 		{
-			_rigidbody.MovePosition(Time.deltaTime * this.Speed * _rigidbody.transform.up + _rigidbody.transform.position);
+			if (сheckInvisibility() == true)
+			{
+				this.OnTriggered?.Invoke(this);
+				return;
+			}
+			
+			var transform1 = _rigidbody.transform;
+			_rigidbody.MovePosition(Time.deltaTime * this.Speed * transform1.up + transform1.position);
+			
+			bool сheckInvisibility()
+			{ 
+				Vector3 screenPos = Camera.WorldToScreenPoint(transform.position);
+				return screenPos.x > 0f && screenPos.x < Screen.width && screenPos.y > 0f && screenPos.y < Screen.height;
+			}
+		}
+
+		private readonly int _dissolvePower = Shader.PropertyToID("_DissolvePower");
+
+		public void SetDissolvePower(float value)
+		{
+			if(this.Sprite == null)
+				return;
+			
+			this.Sprite.material.SetFloat(_dissolvePower, value);
 		}
 	}
 }
