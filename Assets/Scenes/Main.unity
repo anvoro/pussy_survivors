@@ -1109,8 +1109,6 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
-  - component: {fileID: 519420034}
-  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1197,41 +1195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 983362002}
+  MonsterManager: {fileID: 956356325}
   _gameManager: {fileID: 519420033}
---- !u!114 &519420034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47f9f4e1de39467bbb88f546534cf7f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _monsterManager: {fileID: 519420034}
-  _monsterPrefabs:
-  - {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
-  - {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
-  - {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
-  _pool: {fileID: 519420035}
-  SpawnShape: {fileID: 1658534528}
-  MonsterParent: {fileID: 956356323}
-  spawnDelay: 5
-  maxMonstersAlive: 15
---- !u!114 &519420035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45b1cfe0249ef1d469997557b42dd20d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &523764911
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,6 +2046,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 956356323}
+  - component: {fileID: 956356325}
+  - component: {fileID: 956356324}
   m_Layer: 0
   m_Name: MonsterParent
   m_TagString: Untagged
@@ -2103,6 +2070,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &956356324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956356322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b1cfe0249ef1d469997557b42dd20d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &956356325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956356322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f9f4e1de39467bbb88f546534cf7f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _monsterManager: {fileID: 956356325}
+  _pool: {fileID: 956356324}
+  SpawnShape: {fileID: 1658534528}
+  MonsterParent: {fileID: 956356323}
+  spawnDelay: 5
+  maxMonstersAlive: 15
+  Configs:
+  - MonsterConfigs:
+    - MaxMonsterCount: 11
+      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+  - MonsterConfigs:
+    - MaxMonsterCount: 8
+      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+    - MaxMonsterCount: 6
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+  - MonsterConfigs:
+    - MaxMonsterCount: 7
+      MonsterPrefab: {fileID: 1951829596430795998, guid: feb15ce5ea1ffce448b506bf5605c9c2, type: 3}
+    - MaxMonsterCount: 5
+      MonsterPrefab: {fileID: 1951829596430795998, guid: d1ff1e8ec2c7e74498ae114cb35271c0, type: 3}
+    - MaxMonsterCount: 4
+      MonsterPrefab: {fileID: 1951829596430795998, guid: dc33d84491a4d034bbacf5c9fbc2fce2, type: 3}
 --- !u!114 &983362002 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
@@ -4087,6 +4100,10 @@ PrefabInstance:
       propertyPath: HealthBar
       value: 
       objectReference: {fileID: 1524145706}
+    - target: {fileID: 2231849428880359315, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
+      propertyPath: LevelText
+      value: 
+      objectReference: {fileID: 1672605393}
     - target: {fileID: 2231849428880359319, guid: c3b1a8b8445b0624082676c13dce0825, type: 3}
       propertyPath: m_RootOrder
       value: 3

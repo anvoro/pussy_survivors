@@ -28,10 +28,12 @@ public class PlayerController : CharacterBase
 
     public Slider HealthBar;
     public Slider XPBar;
-    public TMP_Text Level;
+    public TMP_Text LevelText;
 
     public WeaponBase[] Weapons;
 
+    public int Level => this._level;
+    
     private int _level = 0;
     private int _currentXp;
     private int _xpToNextLevel;
@@ -58,11 +60,11 @@ public class PlayerController : CharacterBase
 
     void LevelUP()
     {
-        if (this._level < Levels.Length)
+        if (this._level < Levels.Length - 1)
         {
             this._level++;
             
-            Level.text = $"{this._level + 1}";
+            LevelText.text = $"{this._level + 1}";
 
             _xpToNextLevel = this.Levels[this._level].XpToNextLevel;
             this._currentHealth = this.MaxHealth;
@@ -70,7 +72,7 @@ public class PlayerController : CharacterBase
         }
         else
         {
-            Level.text = "MAX";
+            LevelText.text = "MAX";
         }
     }
     
@@ -102,7 +104,7 @@ public class PlayerController : CharacterBase
         
         this.SetXPBar();
         this.SetHealthBar();
-        Level.text = $"{this._level + 1}";
+        LevelText.text = $"{this._level + 1}";
     }
 
     protected override void Update()

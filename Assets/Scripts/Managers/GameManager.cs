@@ -5,10 +5,9 @@ namespace DefaultNamespace
 {
 	public class GameManager : MonoBehaviour
 	{
-		public const string PlayerTag = "Player";
-		public const string MonsterTag = "Monster";
-		
 		public PlayerController Player;
+
+		public MonsterManager MonsterManager;
 		
 		[SerializeField]
 		private GameManager _gameManager;
@@ -20,6 +19,7 @@ namespace DefaultNamespace
 		private void Awake()
 		{
 			gm = _gameManager;
+			MonsterManager.Init();
 		}
 	}
 }

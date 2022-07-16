@@ -9,6 +9,9 @@ namespace Weapons
 	public class Projectile : MonoBehaviour
 	{
 		public float Speed;
+
+		public bool DoDamageOnContact = true;
+		public bool DestroySelfOnContact = true;
 		
 		private float _damage;
 
@@ -17,6 +20,7 @@ namespace Weapons
 		private Rigidbody2D _rigidbody;
 
 		public SpriteRenderer Sprite;
+		
 		
 		private void Awake()
 		{
@@ -41,11 +45,13 @@ namespace Weapons
 
 		private void OnTriggerEnter2D(Collider2D other)
 		{
-			if (other.gameObject.TryGetComponent(out MonsterController monster))
+			if (DoDamageOnContact == true && other.gameObject.TryGetComponent(out MonsterController monster))
 			{
 				monster.Hurt(this._damage);
 				
-				Destroy(this.gameObject);
+				if(DestroySelfOnContact == true)
+					//todo добавить пул
+					Destroy(this.gameObject);
 			}
 		}
 

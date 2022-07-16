@@ -11,10 +11,7 @@ namespace DefaultNamespace
 	{
 		[SerializeField]
 		private MonsterManager _monsterManager;
-
-		[SerializeField]
-		private MonsterController[] _monsterPrefabs;
-
+		
 		[SerializeField]
 		private MonstersPool _pool;
 		
@@ -31,15 +28,15 @@ namespace DefaultNamespace
 		
 		public static MonsterManager Instance => monsterManager;
 
-		private void Awake()
+		public void Init()
 		{
 			monsterManager = this._monsterManager;
 
 			this._pool.Init();
 			
-			foreach (MonsterController prefab in this._monsterPrefabs)
+			foreach (MonsterConfig monsterConfig in this.Configs[GameManager.Instance.Player.Level].MonsterConfigs)
 			{
-				this._pool.Create(prefab, this.maxMonstersAlive / this._monsterPrefabs.Length);
+				this._pool.Create(monsterConfig.MonsterPrefab, monsterConfig.MaxMonsterCount);
 			}
 
 			currentSpawnDelay = this.spawnDelay;
@@ -67,19 +64,37 @@ namespace DefaultNamespace
 			}
 		}
 
+		public SpawnConfig[] Configs;
+		
+		[Serializable]
+		public struct SpawnConfig
+		{
+			public MonsterConfig[] MonsterConfigs;
+		}
+		
+		[Serializable]
+		public struct MonsterConfig
+		{
+			public int MaxMonsterCount;
+			public MonsterController MonsterPrefab;
+		}
+		
 		private void Spawn(int maxMonsters)
 		{
-			foreach (MonsterController prefab in this._monsterPrefabs.OrderBy(a => Guid.NewGuid()).ToArray())
+			if(monstersAlive >= maxMonsters)
+				return;
+			
+			foreach (MonsterConfig monsterConfig in this.Configs[GameManager.Instance.Player.Level].MonsterConfigs.OrderBy(a => Guid.NewGuid()).ToArray())
 			{
 				if(monstersAlive >= maxMonsters)
 					break;
 				
-				for (int i = 0; i <= maxMonsters / this._monsterPrefabs.Length; i++)
+				for (int i = 0; i <= monsterConfig.MaxMonsterCount; i++)
 				{
 					if(monstersAlive >= maxMonsters)
 						break;
 					
-					MonsterController monster = this._pool.GetOrCreate(prefab);
+					MonsterController monster = this._pool.GetOrCreate(monsterConfig.MonsterPrefab);
 					monster.OnCharacterDie -= OnMonsterDeath;
 					monster.OnCharacterDie += OnMonsterDeath;
 
