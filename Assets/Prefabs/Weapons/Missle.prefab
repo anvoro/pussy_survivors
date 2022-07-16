@@ -69,12 +69,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 465755486ef34e87ad7ebe99c007cac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  Speed: 1
   range: 20
   DoDamageOnContact: 1
   DestroySelfOnContact: 1
   Sprite: {fileID: 1906896665449619255}
-  Collider: {fileID: 0}
+  Collider: {fileID: 2127881053110518213}
 --- !u!70 &2127881053110518213
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -439,7 +439,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bf5a8066f75eecd4492870fd09be7955, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -792,7 +792,7 @@ MonoBehaviour:
   MonsterParent: {fileID: 956356323}
   KillsText: {fileID: 9102872269668522488}
   spawnDelay: 3
-  maxMonstersAlive: 70
+  maxMonstersAlive: 80
   Configs:
   - MonsterConfigs:
     - MaxMonsterCount: 4

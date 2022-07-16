@@ -14,6 +14,9 @@ namespace Weapons
 
 		private async void OnProjectileTriggered(Missle projectile)
 		{
+			if(projectile == null || projectile.gameObject == null)
+				return;
+			
 			projectile.Collider.enabled = false;
 			
 			float value = 1f;
@@ -27,6 +30,7 @@ namespace Weapons
 			}
 			
 			projectile.OnTriggered -= this.OnProjectileTriggered;
+			
 			Destroy(projectile.gameObject);
 		}
 
