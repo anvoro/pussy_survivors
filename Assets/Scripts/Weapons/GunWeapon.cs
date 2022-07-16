@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Tank.Helpers.ObjectPool;
 using UnityEngine;
-using Vector2 = System.Numerics.Vector2;
 
 namespace Weapons
 {
@@ -33,7 +32,7 @@ namespace Weapons
 		protected override void Attack()
 		{
 			var projectile = Instantiate(this.ProjectilePrefab, Projectile.ProjectileParent);
-			projectile.Init(this.Damage);
+			projectile.Init(this._player.Damage * this.DamageMult);
 			
 			projectile.OnTriggered += this.OnProjectileTriggered;
 			Transform transform = projectile.transform;

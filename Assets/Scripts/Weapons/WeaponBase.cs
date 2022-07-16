@@ -4,7 +4,7 @@ namespace Weapons
 {
 	public abstract class WeaponBase : ScriptableObject
 	{
-		public float Damage = 1;
+		public float DamageMult = 1;
 
 		public float CD = 1f;
 		

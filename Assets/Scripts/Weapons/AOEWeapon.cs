@@ -26,7 +26,7 @@ namespace Weapons
 		{
 			foreach (MonsterController monster in MonsterManager.Instance.ActiveMonsters.Where(e => Vector2.Distance(e.Position, this._player.Position) <= range))
 			{
-				monster.Hurt(this.Damage);
+				monster.Hurt(this._player.Damage * this.DamageMult);
 			}
 		}
 

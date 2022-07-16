@@ -14,6 +14,7 @@ public class PlayerController : CharacterBase
 
         public float HpAdd;
         public float SpeedAdd;
+        public float AddDamage;
     }
 
     public LevelConfig[] Levels;
@@ -38,6 +39,10 @@ public class PlayerController : CharacterBase
     private int _currentXp;
     private int _xpToNextLevel;
 
+    public float DamageBase = 6;
+
+    public float Damage => DamageBase + this.Levels[this._level].AddDamage;
+    
     public override float Speed => base.Speed + this.Levels[this._level].SpeedAdd;
 
     public override float MaxHealth => base.MaxHealth + this.Levels[this._level].HpAdd;
