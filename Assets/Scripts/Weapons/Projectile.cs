@@ -13,9 +13,6 @@ namespace Weapons
 		
 		public static Transform ProjectileParent => projectileParent ??= GameObject.FindGameObjectWithTag("ProjectileParent").transform;
 
-		private static Camera Camera => camera ??= Camera.main;
-		private static Camera camera;
-		
 		public float Speed;
 
 		public bool IsTriggered { get; set; }
@@ -58,13 +55,8 @@ namespace Weapons
 			this.OnTriggered?.Invoke(this);
 		}
 
-		private void OnCollisionEnter2D(Collision2D col)
+		private void OnTriggerEnter2D(Collider2D col)
 		{
-			if (col.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
-			{
-				SetTriggered();
-			}
-			
 			if(this.IsTriggered == true)
 				return;
 			
@@ -74,6 +66,17 @@ namespace Weapons
 
 				if (DestroySelfOnContact == true)
 					SetTriggered();
+			}
+		}
+
+		private void OnCollisionEnter2D(Collision2D col)
+		{
+			if(this.IsTriggered == true)
+				return;
+			
+			if (col.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+			{
+				SetTriggered();
 			}
 		}
 
@@ -89,7 +92,7 @@ namespace Weapons
 			
 			bool сheckVisibility()
 			{ 
-				Vector3 screenPos = Camera.WorldToScreenPoint(transform.position);
+				Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
 				return screenPos.x > 0f && screenPos.x < Screen.width && screenPos.y > 0f && screenPos.y < Screen.height;
 			}
 		}

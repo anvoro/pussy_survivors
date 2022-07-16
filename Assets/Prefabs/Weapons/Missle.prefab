@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6825215898724410768}
   - component: {fileID: -3608975097128384696}
   - component: {fileID: 3244319297962379678}
+  - component: {fileID: 3439665869770524835}
   m_Layer: 14
   m_Name: Missle
   m_TagString: Untagged
@@ -68,13 +69,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 465755486ef34e87ad7ebe99c007cac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  range: 14
+  Speed: 2
+  range: 20
   DoDamageOnContact: 1
   DestroySelfOnContact: 1
   Sprite: {fileID: 1906896665449619255}
   Collider: {fileID: 3244319297962379678}
 --- !u!58 &3244319297962379678
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798324762590165809}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.21278605, y: -0.11088848}
+  serializedVersion: 2
+  m_Radius: 0.5959034
+--- !u!58 &3439665869770524835
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,7 +180,7 @@ SpriteRenderer:
   m_SortingLayerID: 1146132493
   m_SortingLayer: 1
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: c39c5f26422c1f14f9da4d827584fdfa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bd81e48ec9a32894185151306f77a70a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0

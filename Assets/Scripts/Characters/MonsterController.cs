@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace DefaultNamespace
 {
@@ -33,15 +34,18 @@ namespace DefaultNamespace
 
 		public override void Reset()
 		{
+			if(this._renderer == null)
+				return;
+
 			this._renderer.material.SetFloat(_dissolvePower, 1);
 			this._collider.enabled = true;
 			
 			base.Reset();
 		}
 
-		private void OnCollisionStay(Collision collisionInfo)
+		private void OnTriggerStay2D(Collider2D other)
 		{
-			if (_currentCD <= 0 && collisionInfo.gameObject.TryGetComponent(out PlayerController player))
+			if (_currentCD <= 0 && other.gameObject.TryGetComponent(out PlayerController player))
 			{
 				player.Hurt(Damage);
 

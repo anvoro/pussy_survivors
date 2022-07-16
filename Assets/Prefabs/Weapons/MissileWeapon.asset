@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d4acffcc72b48869560bb6ee174c1d7, type: 3}
   m_Name: MissileWeapon
   m_EditorClassIdentifier: 
-  Damage: 3
+  DamageMult: 2
   CD: 2
   ProjectilePrefab: {fileID: -3608975097128384696, guid: b02b6c90f92b5d64f84dbc0bc789817d, type: 3}
   ProjectileSpawnOffset: 2

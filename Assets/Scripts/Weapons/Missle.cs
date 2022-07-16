@@ -9,10 +9,7 @@ namespace Weapons
 	public class Missle : MonoBehaviour
 	{
 		private static Transform projectileParent;
-		
-		private static Camera Camera => camera ??= Camera.main;
-		private static Camera camera;
-		
+
 		public float Speed;
 
 		public float range = 10;
@@ -43,7 +40,12 @@ namespace Weapons
 
 			var a = MonsterManager.Instance.ActiveMonsters
 				.Where(e => Vector2.Distance(e.Position, GameManager.Instance.Player.Position) <= range).ToArray();
-			target = a[Random.Range(0, a.Length)];
+			if(a.Length > 0)
+				target = a[Random.Range(0, a.Length)];
+			else
+			{
+				this.target = null;
+			}
 		}
 
 		private void SetTriggered()
@@ -52,13 +54,8 @@ namespace Weapons
 			this.OnTriggered?.Invoke(this);
 		}
 
-		private void OnCollisionEnter2D(Collision2D col)
+		private void OnTriggerEnter2D(Collider2D col)
 		{
-			if (col.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
-			{
-				SetTriggered();
-			}
-			
 			if(this.IsTriggered == true)
 				return;
 			
@@ -68,6 +65,17 @@ namespace Weapons
 
 				if (DestroySelfOnContact == true)
 					SetTriggered();
+			}
+		}
+
+		private void OnCollisionEnter2D(Collision2D col)
+		{
+			if(this.IsTriggered == true)
+				return;
+			
+			if (col.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+			{
+				SetTriggered();
 			}
 		}
 
@@ -83,7 +91,7 @@ namespace Weapons
 			
 			bool сheckVisibility()
 			{ 
-				Vector3 screenPos = Camera.WorldToScreenPoint(transform.position);
+				Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
 				return screenPos.x > 0f && screenPos.x < Screen.width && screenPos.y > 0f && screenPos.y < Screen.height;
 			}
 		}
@@ -92,6 +100,7 @@ namespace Weapons
 		{
 			if(this.IsTriggered == true)
 				return;
+			
 			if (this.target == null)
 				return;
 			

@@ -35,6 +35,9 @@ namespace DefaultNamespace
         
         private void ResetMonster(MonsterController monster)
         {
+            if(monster == null || monster.gameObject == null)
+                return;
+            
             monster.Reset();
             monster.gameObject.SetActive(false);
         }

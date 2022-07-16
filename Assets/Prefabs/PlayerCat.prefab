@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2231849428880359316}
   - component: {fileID: 2231849428880359317}
   - component: {fileID: 2231849428880359314}
+  - component: {fileID: 8998659143433308631}
   - component: {fileID: 2231849428880359315}
   m_Layer: 11
   m_Name: PlayerCat
@@ -120,6 +121,32 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.009767771, y: -0.0024419427}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 3}
+    newSize: {x: 6, y: 6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.355804, y: 1.3704559}
+  m_EdgeRadius: 0
+--- !u!61 &8998659143433308631
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231849428880359312}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -154,66 +181,87 @@ MonoBehaviour:
   - XpToNextLevel: 4
     HpAdd: 0
     SpeedAdd: 0
+    AddDamage: 1
   - XpToNextLevel: 8
     HpAdd: 3
     SpeedAdd: 1
+    AddDamage: 1
   - XpToNextLevel: 12
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 1
   - XpToNextLevel: 12
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 1
   - XpToNextLevel: 20
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 1
   - XpToNextLevel: 30
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 1
   - XpToNextLevel: 40
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 1
   - XpToNextLevel: 50
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 2
   - XpToNextLevel: 60
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 2
   - XpToNextLevel: 70
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 2
   - XpToNextLevel: 80
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 2
   - XpToNextLevel: 80
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 2
   - XpToNextLevel: 80
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 2
   - XpToNextLevel: 80
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 3
   - XpToNextLevel: 80
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 0
   - XpToNextLevel: 80
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 3
   - XpToNextLevel: 80
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 4
   - XpToNextLevel: 80
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 4
   - XpToNextLevel: 80
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 5
   - XpToNextLevel: 80
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 0
   - XpToNextLevel: 80
     HpAdd: 6
     SpeedAdd: 2
+    AddDamage: 5
   Rigidbody2D: {fileID: 2231849428880359317}
   Canvas: {fileID: 0}
   HealthBarPivot: {fileID: 2231849430724237656}
@@ -223,6 +271,8 @@ MonoBehaviour:
   Weapons:
   - {fileID: 11400000, guid: 595f2c7950259df4e9c824a2cc33b72e, type: 2}
   - {fileID: 11400000, guid: 95c4f5a64aafbd84cb8229f66e9296dd, type: 2}
+  - {fileID: 11400000, guid: a23c5c4e5bfa9b04baffe6737066135b, type: 2}
+  DamageBase: 6
 --- !u!1 &2231849429262212434
 GameObject:
   m_ObjectHideFlags: 0
