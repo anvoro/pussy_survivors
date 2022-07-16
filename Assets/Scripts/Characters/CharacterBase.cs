@@ -6,21 +6,21 @@ namespace DefaultNamespace
 	public abstract class CharacterBase : MonoBehaviour
 	{
 		public bool IsDead { get; set; }
-		
+
 		protected SpriteRenderer _renderer;
 
-		protected Transform Transform => this._transform ? this._transform : (this._transform = this.transform);
+		private Transform Transform => this._transform ? this._transform : (this._transform = this.transform);
 
 		public Vector2 Velocity { get; protected set; }
 
 		public float _speedBase = 1f;
 		public float _maxHealthBase = 10;
-		
+
 		protected float _currentHealth;
 		private Transform _transform;
 
-		public event Action OnHealthChanged; 
-		public event Action<CharacterBase> OnCharacterDie; 
+		public event Action OnHealthChanged;
+		public event Action<CharacterBase> OnCharacterDie;
 
 		public virtual float Speed
 		{
@@ -31,7 +31,7 @@ namespace DefaultNamespace
 		{
 			get => this._maxHealthBase;
 		}
-		
+
 		public float CurrentHealth
 		{
 			get => this._currentHealth;
@@ -46,8 +46,8 @@ namespace DefaultNamespace
 					this._currentHealth = this._maxHealthBase;
 
 				this.OnHealthChanged?.Invoke();
-				
-				if(this._currentHealth == 0)
+
+				if (this._currentHealth == 0)
 					OnCharacterDie?.Invoke(this);
 			}
 		}
@@ -58,12 +58,12 @@ namespace DefaultNamespace
 		{
 			this.CurrentHealth -= Math.Abs(value);
 		}
-		
+
 		public void Heal(float value)
 		{
 			this.CurrentHealth += Math.Abs(value);
 		}
-		
+
 		protected virtual void Awake()
 		{
 			_renderer = this.GetComponent<SpriteRenderer>();
