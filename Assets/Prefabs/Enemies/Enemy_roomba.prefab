@@ -98,11 +98,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b4e96caa34c4c93b853f75c0976a2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
-  MaxHealth: 3
+  _speedBase: 1
+  _maxHealthBase: 10
   _desiredSeparation: 2
   Damage: 2
   AttackCD: 1
+  KillXP: 4
   _collider: {fileID: 8366034231312435621}
 --- !u!58 &8366034231312435621
 CircleCollider2D:

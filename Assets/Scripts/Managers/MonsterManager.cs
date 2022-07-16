@@ -99,6 +99,8 @@ namespace DefaultNamespace
 		private async void OnMonsterDeath(CharacterBase character)
 		{
 			var monster = (MonsterController)character;
+
+			GameManager.Instance.Player.CurrentXP += monster.KillXP;
 			
 			monster.IsDead = true;
 			monstersAlive--;

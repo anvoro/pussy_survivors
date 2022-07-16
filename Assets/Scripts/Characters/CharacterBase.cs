@@ -4,9 +4,7 @@ using UnityEngine;
 namespace DefaultNamespace
 {
 	public abstract class CharacterBase : MonoBehaviour
-	{	
-		public float Speed = 1f;
-
+	{
 		public bool IsDead { get; set; }
 		
 		protected SpriteRenderer _renderer;
@@ -15,13 +13,25 @@ namespace DefaultNamespace
 
 		public Vector2 Velocity { get; protected set; }
 
-		public int MaxHealth = 10;
-		private int _currentHealth;
+		public float _speedBase = 1f;
+		public float _maxHealthBase = 10;
+		
+		protected float _currentHealth;
 
 		public event Action OnHealthChanged; 
 		public event Action<CharacterBase> OnCharacterDie; 
 
-		public int CurrentHealth
+		public virtual float Speed
+		{
+			get => this._speedBase;
+		}
+
+		public virtual float MaxHealth
+		{
+			get => this._maxHealthBase;
+		}
+		
+		public float CurrentHealth
 		{
 			get => this._currentHealth;
 			private set
@@ -31,8 +41,8 @@ namespace DefaultNamespace
 				if (this._currentHealth < 0)
 					this._currentHealth = 0;
 
-				if (this._currentHealth > this.MaxHealth)
-					this._currentHealth = this.MaxHealth;
+				if (this._currentHealth > this._maxHealthBase)
+					this._currentHealth = this._maxHealthBase;
 
 				this.OnHealthChanged?.Invoke();
 				
@@ -43,12 +53,12 @@ namespace DefaultNamespace
 
 		public Vector2 Position => this._transform.position;
 
-		public void Hurt(int value)
+		public void Hurt(float value)
 		{
 			this.CurrentHealth -= Math.Abs(value);
 		}
 		
-		public void Heal(int value)
+		public void Heal(float value)
 		{
 			this.CurrentHealth += Math.Abs(value);
 		}
@@ -61,7 +71,7 @@ namespace DefaultNamespace
 
 		public virtual void Reset()
 		{
-			this._currentHealth = this.MaxHealth;
+			this._currentHealth = this._maxHealthBase;
 		}
 
 		protected virtual void Update()

@@ -1,11 +1,23 @@
 using System;
 using DefaultNamespace;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Weapons;
 
 public class PlayerController : CharacterBase
 {
+    [Serializable]
+    public struct LevelConfig
+    {
+        public int XpToNextLevel;
+
+        public float HpAdd;
+        public float SpeedAdd;
+    }
+
+    public LevelConfig[] Levels;
+    
     public Rigidbody2D Rigidbody2D;
 
     public Canvas Canvas;
@@ -15,9 +27,59 @@ public class PlayerController : CharacterBase
     public Transform HealthBarPivot;
 
     public Slider HealthBar;
+    public Slider XPBar;
+    public TMP_Text Level;
 
     public WeaponBase[] Weapons;
+
+    private int _level = 0;
+    private int _currentXp;
+    private int _xpToNextLevel;
+
+    public override float Speed => base.Speed + this.Levels[this._level].SpeedAdd;
+
+    public override float MaxHealth => base.MaxHealth + this.Levels[this._level].HpAdd;
+
+    public int CurrentXP
+    {
+        get => this._currentXp;
+        set
+        {
+            this._currentXp = value;
+            if (this._currentXp >= this.Levels[this._level].XpToNextLevel)
+            {
+                LevelUP();
+                _currentXp = 0;
+            }
+            
+            SetXPBar();
+        }
+    }
+
+    void LevelUP()
+    {
+        if (this._level < Levels.Length)
+        {
+            this._level++;
+            
+            Level.text = $"{this._level + 1}";
+
+            _xpToNextLevel = this.Levels[this._level].XpToNextLevel;
+            this._currentHealth = this.MaxHealth;
+            this.SetHealthBar();
+        }
+        else
+        {
+            Level.text = "MAX";
+        }
+    }
     
+    void SetXPBar()
+    {
+        this.XPBar.maxValue = this._xpToNextLevel;
+        this.XPBar.value = this.CurrentXP;
+    }
+
     // Start is called before the first frame update
     protected override void Awake()
     {
@@ -26,7 +88,6 @@ public class PlayerController : CharacterBase
         this._camera = Camera.main;
         
         this.Reset();
-        
         base.Awake();
     }
 
@@ -37,8 +98,11 @@ public class PlayerController : CharacterBase
             weapon.Init(this);
         }
         
+        _xpToNextLevel = this.Levels[this._level].XpToNextLevel;
         
+        this.SetXPBar();
         this.SetHealthBar();
+        Level.text = $"{this._level + 1}";
     }
 
     protected override void Update()

@@ -148,12 +148,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78db0ebe477e23f449c615a00147fde0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
-  MaxHealth: 100
+  _speedBase: 1
+  _maxHealthBase: 10
+  Levels:
+  - XpToNextLevel: 10
+    HpAdd: 0
+    SpeedAdd: 0
+  - XpToNextLevel: 20
+    HpAdd: 3
+    SpeedAdd: 0.1
   Rigidbody2D: {fileID: 2231849428880359317}
   Canvas: {fileID: 0}
   HealthBarPivot: {fileID: 2231849430724237656}
   HealthBar: {fileID: 0}
+  XPBar: {fileID: 0}
+  Level: {fileID: 0}
   Weapons:
   - {fileID: 11400000, guid: 595f2c7950259df4e9c824a2cc33b72e, type: 2}
 --- !u!1 &2231849429262212434

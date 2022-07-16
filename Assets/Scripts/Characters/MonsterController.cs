@@ -6,12 +6,14 @@ namespace DefaultNamespace
 	{
 		[SerializeField] private float _desiredSeparation = 2f;
 
-		public int Damage = 5;
+		public float Damage = 5;
 
 		public float AttackCD = 1f;
 
 		private float _currentCD = 0;
 
+		public int KillXP = 1;
+		
 		[SerializeField]
 		private Collider2D _collider;
 
